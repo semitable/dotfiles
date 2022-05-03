@@ -1,0 +1,41 @@
+ForwardX11 yes
+ServerAliveInterval 60
+Host dice
+  HostName remote.ssh.inf.ed.ac.uk
+  User s1873113
+  GSSAPIAuthentication yes
+  GSSAPIDelegateCredentials yes
+  GSSAPIRenewalForcesRekey yes
+
+Host mlp
+  User s1873113
+  HostName uhtred.inf.ed.ac.uk
+  ProxyJump dice
+  
+Host eddie
+  User s1873113
+  HostName eddie.ecdf.ed.ac.uk
+  GSSAPIAuthentication yes
+  GSSAPIDelegateCredentials yes
+  GSSAPIRenewalForcesRekey yes
+  ProxyJump dice
+
+Host agents1
+  User fchr
+  HostName agents1.inf.ed.ac.uk
+  ProxyJump dice
+  
+Host agents2
+  User fchr
+  HostName agents2.ppls.ed.ac.uk
+  ProxyJump dice
+
+ServerAliveInterval 30
+
+Host cobalt
+  HostName cobalt
+
+Host ipab1
+  User s1873113
+  HostName ipab1.inf.ed.ac.uk
+  ProxyJump dice
