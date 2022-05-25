@@ -21,6 +21,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'lervag/vimtex'
+Plug 'psf/black', { 'branch': 'stable' }
+Plug 'brentyi/isort.vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 call plug#end()
 
 let g:airline_powerline_fonts=1
@@ -33,13 +37,17 @@ set hlsearch
 set shortmess=a
 set hidden
 set number
-
 set expandtab           " enter spaces when tab is pressed
-set textwidth=120       " break lines when line length increases
 set tabstop=4           " use 4 spaces to represent tab
 set softtabstop=4
 set shiftwidth=4        " number of spaces to use for auto indent
 set autoindent          " copy indent from current line when starting a new line
+
+" linebreaks
+set textwidth=0
+set wrapmargin=0
+set wrap
+set linebreak
 
 " make backspaces more powerfull
 set backspace=indent,eol,start
@@ -47,4 +55,3 @@ set backspace=indent,eol,start
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
-syntax on
