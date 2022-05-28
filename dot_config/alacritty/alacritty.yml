@@ -1,3 +1,5 @@
 font:
   normal:
     family: "MesloLGS NF"
+window:
+  startup_mode: Maximized
