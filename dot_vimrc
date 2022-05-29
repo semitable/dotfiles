@@ -25,7 +25,11 @@ Plug 'psf/black', { 'branch': 'stable' }
 Plug 'brentyi/isort.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
+
+colorscheme nord
+
 
 let g:airline_powerline_fonts=1
 
@@ -43,15 +47,16 @@ set softtabstop=4
 set shiftwidth=4        " number of spaces to use for auto indent
 set autoindent          " copy indent from current line when starting a new line
 
-" linebreaks
+" linebreaks:
 set textwidth=0
 set wrapmargin=0
 set wrap
 set linebreak
 
-" make backspaces more powerfull
+" make backspaces more powerfull:
 set backspace=indent,eol,start
 
+" F9 to execute python:
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
