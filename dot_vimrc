@@ -1,6 +1,3 @@
-filetype indent on
-filetype plugin on
-
 if &compatible
   " `:set nocp` has many side effects. Therefore this should be done
   " only when 'compatible' is set.
@@ -37,16 +34,21 @@ let g:airline_powerline_fonts=1
 nnoremap <silent> <C-f> :Files<CR>
 nnoremap <silent> <Leader>f :Rg<CR>
 
+" indentation:
+set autoindent          " copy indent from current line when starting a new line
+filetype plugin indent on
+
+set tabstop=8
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 set hlsearch
 set shortmess=a
 set hidden
 set number
-set expandtab           " enter spaces when tab is pressed
-set tabstop=4           " use 4 spaces to represent tab
-set softtabstop=4
-set shiftwidth=4        " number of spaces to use for auto indent
-set autoindent          " copy indent from current line when starting a new line
 
 " linebreaks:
 set textwidth=0
