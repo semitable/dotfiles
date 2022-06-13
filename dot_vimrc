@@ -32,6 +32,12 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 
+for key in ['<Up>', '<Down>', '<Left>', '<Right>', '<PageUp>', '<PageDown>']
+  exec 'noremap' key '<Nop>'
+  exec 'inoremap' key '<Nop>'
+  exec 'cnoremap' key '<Nop>'
+endfor
+
 if exists('+termguicolors')
   set termguicolors
 endif
