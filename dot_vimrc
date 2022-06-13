@@ -16,19 +16,19 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'preservim/nerdtree'
-Plug 'lervag/vimtex'
+" Plug 'preservim/nerdtree'
+" Plug 'lervag/vimtex'
 Plug 'psf/black', { 'branch': 'stable' }
 Plug 'brentyi/isort.vim'
-Plug 'tomtom/tcomment_vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-fugitive'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'ggandor/lightspeed.nvim'
+Plug 'tpope/vim-surround'
 call plug#end()
 
-colorscheme nord
-
-
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
 let g:airline_powerline_fonts=1
 
 nnoremap <silent> <C-f> :Files<CR>

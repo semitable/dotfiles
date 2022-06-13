@@ -25,6 +25,11 @@ Host agents1
   HostName agents1.inf.ed.ac.uk
   ProxyJump dice
   
+Host agents3
+  User fchr
+  HostName agents3.ppls.ed.ac.uk
+  ProxyJump dice
+
 Host agents2
   User fchr
   HostName agents2.ppls.ed.ac.uk
