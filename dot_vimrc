@@ -27,6 +27,11 @@ Plug 'ggandor/lightspeed.nvim'
 Plug 'tpope/vim-surround'
 call plug#end()
 
+
+if exists('+termguicolors')
+  set termguicolors
+endif
+
 colorscheme onehalfdark
 let g:airline_theme='onehalfdark'
 let g:airline_powerline_fonts=1
