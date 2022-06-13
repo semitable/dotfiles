@@ -28,6 +28,7 @@ Plug 'tpope/vim-surround'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 
@@ -39,8 +40,13 @@ colorscheme onehalfdark
 let g:airline_theme='onehalfdark'
 let g:airline_powerline_fonts=1
 
-nnoremap <silent> <C-f> :Files<CR>
-nnoremap <silent> <Leader>f :Rg<CR>
+" nnoremap <silent> <C-f> :Files<CR>
+" nnoremap <silent> <Leader>f :Rg<CR>
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " indentation:
 set autoindent          " copy indent from current line when starting a new line
@@ -52,7 +58,7 @@ set shiftwidth=4
 set expandtab
 
 
-set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+" set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 set hlsearch
 set shortmess=a
 set hidden
