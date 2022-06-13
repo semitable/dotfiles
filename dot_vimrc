@@ -12,8 +12,8 @@ endif
 
 
 call plug#begin()
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Plug 'preservim/nerdtree'
@@ -25,6 +25,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'ggandor/lightspeed.nvim'
 Plug 'tpope/vim-surround'
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 
 
