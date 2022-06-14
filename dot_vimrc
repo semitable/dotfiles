@@ -34,6 +34,13 @@ Plug 'tpope/vim-commentary'
 Plug 'folke/which-key.nvim'
 call plug#end()
 
+lua << EOF
+  require("which-key").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+EOF
 
 for key in ['<Up>', '<Down>', '<Left>', '<Right>', '<PageUp>', '<PageDown>']
   exec 'noremap' key '<Nop>'
