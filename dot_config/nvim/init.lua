@@ -11,6 +11,7 @@ require('lualine').setup {
   }
 }
 
+require('telescope').load_extension('fzf')
 -- "for key in ['<Up>', '<Down>', '<Left>', '<Right>', '<PageUp>', '<PageDown>']
 -- "  exec 'noremap' key '<Nop>'
 -- "  exec 'inoremap' key '<Nop>'

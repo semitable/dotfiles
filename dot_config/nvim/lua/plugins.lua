@@ -21,9 +21,13 @@ return require('packer').startup(function(use)
 	'nvim-lualine/lualine.nvim',
 	requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  -- python stuff:
+  -- stuff for languages I use:
+  -- python:
   use {'psf/black', branch = 'stable' }
   use 'brentyi/isort.vim'
+  -- LaTeX:
+  use 'lervag/vimtex' 
+
 
   -- general plugins:
   use 'tpope/vim-commentary'
