@@ -1,7 +1,7 @@
 
-require "lua/plugins"
-require "lua/keymaps"
-require "lua/options"
+require "plugins"
+require "keymaps"
+require "options"
 
 -- Setup colorsceme + status bar
 vim.cmd[[colorscheme tokyonight-night]]
