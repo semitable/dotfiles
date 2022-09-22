@@ -28,6 +28,8 @@ return require('packer').startup(function(use)
   -- LaTeX:
   use 'lervag/vimtex' 
 
+  -- VimWiki:
+  use 'vimwiki/vimwiki'
 
   -- general plugins:
   use 'tpope/vim-commentary'
