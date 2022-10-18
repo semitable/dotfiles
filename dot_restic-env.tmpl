@@ -1,4 +1,4 @@
-export AWS_ACCESS_KEY_ID="DO00EHVGBZN3E8VV7DBK"
-export AWS_SECRET_ACCESS_KEY="E6lGotmVBydzqm7j7h6i6wiZz3xVzmcGgqJpMyS9tOA"
+export AWS_ACCESS_KEY_ID={{(index (lastpass "DIGITALOCEAN") 0).username | quote}}
+export AWS_SECRET_ACCESS_KEY={{(index (lastpass "DIGITALOCEAN") 0).password | quote}}
 export RESTIC_REPOSITORY="s3:fra1.digitaloceanspaces.com/fchr"
 export RESTIC_PASSWORD="!R5XJf3zu*E#^Sf2TfSV2&uKg2Xt"
