@@ -17,6 +17,8 @@ vim.g.maplocalleader = "\\"
 --   term_mode = "t",
 --   command_mode = "c",
 
+-- toggle spellcheck --
+keymap("n", "<F6>", ":setlocal spell! spelllang=en_gb<CR>", opts)
 
 -- Telescope --
 keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", opts)

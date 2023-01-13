@@ -25,11 +25,17 @@ return require('packer').startup(function(use)
   -- python:
   use {'psf/black', branch = 'stable' }
   use 'brentyi/isort.vim'
+  -- snipets:
+  use "L3MON4D3/LuaSnip"
+
   -- LaTeX:
-  use 'lervag/vimtex' 
+  use 'lervag/vimtex'
 
   -- VimWiki:
   use 'vimwiki/vimwiki'
+
+  -- beancount:
+  use 'nathangrigg/vim-beancount'
 
   -- general plugins:
   use 'tpope/vim-commentary'
