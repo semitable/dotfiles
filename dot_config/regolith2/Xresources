@@ -1,0 +1,12 @@
+!regolith.look.path: /usr/share/regolith-look/nord
+regolith.look.path: /usr/share/regolith-look/dracula
+i3-wm.gaps.inner.size: 20
+i3-wm.workspace.01.name: 1:  Web
+i3-wm.workspace.02.name: 2: Terminal
+i3-wm.workspace.03.name: 3: Work (a)
+i3-wm.workspace.04.name: 4: Work (b)
+i3-wm.workspace.05.name: 5: Chat
+i3-wm.bar.position:	top
+regolith.wallpaper.file: /home/semitable/wallpapers/ppEDfQO.jpeg
+regolith.lockscreen.wallpaper.file: /home/semitable/wallpapers/ppEDfQO.jpeg
+i3xrocks.action.time: /usr/bin/gnome-calendar
