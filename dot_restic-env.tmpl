@@ -1,6 +1,8 @@
+{{ if eq .chezmoi.os "linux" }}
 export AWS_ACCESS_KEY_ID={{(index (lastpass "DIGITALOCEAN") 0).username | quote}}
 export AWS_SECRET_ACCESS_KEY={{(index (lastpass "DIGITALOCEAN") 0).password | quote}}
 
 export RESTIC_REPOSITORY="s3:fra1.digitaloceanspaces.com/fchr"
 export RESTIC_PASSWORD={{(index (lastpass "RESTIC") 0).password | quote}}
 
+{{ end }}
