@@ -1,5 +1,5 @@
 {{ if eq .chezmoi.os "linux" }}
-    {{ if (command -v lpass) }}
+    {{ if command -v lpass }}
         export AWS_ACCESS_KEY_ID={{(index (lastpass "DIGITALOCEAN") 0).username | quote}}
         export AWS_SECRET_ACCESS_KEY={{(index (lastpass "DIGITALOCEAN") 0).password | quote}}
 
