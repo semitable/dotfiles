@@ -89,7 +89,7 @@ zinit wait lucid for \
 # Binds Ctrl-z to fg (e.g. to bring nvim back to fg)
 fancy-ctrl-z () {
   if [[ $#BUFFER -eq 0 ]]; then
-    BUFFER="fg"
+    BUFFER=" fg"
     zle accept-line -w
   else
     zle push-input -w
