@@ -34,16 +34,17 @@ smap <silent><expr> <Tab> luasnip#jumpable(1) ? '<Plug>luasnip-jump-next' : '<Ta
 imap <silent><expr> <S-Tab> luasnip#jumpable(-1) ? '<Plug>luasnip-jump-prev' : '<S-Tab>'
 smap <silent><expr> <S-Tab> luasnip#jumpable(-1) ? '<Plug>luasnip-jump-prev' : '<S-Tab>'
 ]]
-require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/luasnippets/"})
+-- require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/luasnippets/"})
+-- require("luasnip.loaders.from_vscode").lazy_load()
 -- require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})
-require("luasnip").config.set_config({ -- Setting LuaSnip config
+-- require("luasnip").config.set_config({ -- Setting LuaSnip config
 
---   -- Enable autotriggered snippets
-  enable_autosnippets = true,
+-- --   -- Enable autotriggered snippets
+--   enable_autosnippets = true,
 
---   -- Use Tab (or some other key if you prefer) to trigger visual selection
-  store_selection_keys = "<Tab>",
-})
+-- --   -- Use Tab (or some other key if you prefer) to trigger visual selection
+--   store_selection_keys = "<Tab>",
+-- })
 
 -- "for key in ['<Up>', '<Down>', '<Left>', '<Right>', '<PageUp>', '<PageDown>']
 -- "  exec 'noremap' key '<Nop>'
