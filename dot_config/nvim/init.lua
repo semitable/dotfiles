@@ -1,6 +1,5 @@
-
-require "plugins"
 require "keymaps"
+require "plugins"
 require "options"
 
 -- Setup colorsceme + status bar
