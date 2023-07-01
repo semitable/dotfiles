@@ -44,3 +44,8 @@ Host ipab1
   User s1873113
   HostName ipab1.inf.ed.ac.uk
   ProxyJump dice
+
+Host rsync.net
+  User zh3204
+  HostName zh3204.rsync.net
+
