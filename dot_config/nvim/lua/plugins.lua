@@ -157,7 +157,6 @@ local plugins = {
                         path = "~/vimwiki/",
                         syntax = "markdown",
                         ext = ".md",
-                        -- auto_diary_index = "1",
                     },
                 }
                 vim.g.vimwiki_global_ext = 0
