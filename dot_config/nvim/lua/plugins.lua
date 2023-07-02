@@ -163,6 +163,7 @@ local plugins = {
                 vim.g.vimwiki_global_ext = 0
             end,
         }, 
+        "tools-life/taskwiki",
 	-- beancount:
 	-- 'nathangrigg/vim-beancount',
 
