@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 	-- colorscheme and statusline
+        { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true}
 	"folke/tokyonight.nvim",
 	{
 		"nvim-lualine/lualine.nvim",
