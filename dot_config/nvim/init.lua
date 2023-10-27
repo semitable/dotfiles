@@ -3,10 +3,11 @@ require "plugins"
 require "options"
 
 -- Setup colorsceme + status bar
-vim.cmd[[colorscheme tokyonight-night]]
+-- vim.cmd[[colorscheme tokyonight-night]]
+vim.cmd[[colorscheme gruvbox]]
 require('lualine').setup {
   options = {
-    theme = 'tokyonight'
+    theme = 'gruvbox'
   }
 }
 
