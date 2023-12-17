@@ -10,6 +10,12 @@ HISTIGNORE="fg:bg"
 alias vi="nvim"
 alias mux="tmuxinator"
 
+if command -v nala 2>&1 > /dev/null; then
+    alias sudo='sudo '
+    alias apt="nala"
+    alias apt-get="nala"
+fi
+
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
