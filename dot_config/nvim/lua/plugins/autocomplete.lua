@@ -19,6 +19,12 @@ return {
         completeopt = "menu,menuone,noinsert,noselect,preview",
       }
 
+      -- table.insert(opts.sources, 1, {
+      --   name = "copilot",
+      --   group_index = 1,
+      --   priority = 2100,
+      -- })
+
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<CR>"] = cmp.mapping.confirm({ select = false }),
         ["<Tab>"] = cmp.mapping(function(fallback)
