@@ -1,4 +1,10 @@
-local selected_host=$(grep "Host " ~/.ssh/config ~/.ssh/my_hosts/* | awk '{print $(NF)}' | fzf --query "$LBUFFER")
+local selected_host $(
+  grep "Host " ~/.ssh/config ~/.ssh/my_hosts/* | 
+  awk -F'[: /]' '{printf "%-20s: %s\n", $(NF-2), $NF}' |
+  fzf --reverse --header "Select a Host" --prompt "SSH Host> " --query "$LBUFFER" | 
+  awk -F': ' '{print $NF}'
+)
+
 if [ -n "$selected_host" ]; then
   BUFFER="ssh ${selected_host}"
   zle accept-line
