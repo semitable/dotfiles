@@ -1,0 +1,12 @@
+Host oxygen
+  HostName oxygen.local
+  User semitable
+
+Host RaspberryPi
+  HostName 192.168.1.183
+  User admin
+
+Host ganymede
+  HostName ganymede.local
+  User root
+
