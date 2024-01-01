@@ -20,6 +20,9 @@ HISTIGNORE="fg:bg"
 
 alias vi="nvim"
 alias mux="tmuxinator"
+alias myip='curl http://ipecho.net/plain; echo'
+alias distro='cat /etc/*-release'
+alias ffs='sudo !!'
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
