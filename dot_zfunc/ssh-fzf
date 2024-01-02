@@ -1,7 +1,8 @@
 local selected_host $(
   grep "Host " ~/.ssh/config ~/.ssh/my_hosts/* | 
   awk -F'[: /]' '{printf "%-20s: %s\n", $(NF-2), $NF}' |
-  fzf --reverse --header "Select a Host" --prompt "SSH Host> " --query "$LBUFFER" | 
+  fzf --reverse --header "Select a Host" --border --prompt "SSH Host> " --query "$LBUFFER" \
+    --preview 'host=$(echo {} | awk "{print \$NF}"); awk -v host="$host" '\''/^Host[[:space:]]+/{flag=0} /^Host[[:space:]]+'"'"'$host'"'"'/{flag=1} flag'\'' ~/.ssh/config ~/.ssh/my_hosts/*' |
   awk -F': ' '{print $NF}'
 )
 
