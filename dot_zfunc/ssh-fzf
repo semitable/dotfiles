@@ -1,4 +1,4 @@
-local selected_host $(
+local selected_host=$(
   grep "Host " ~/.ssh/config ~/.ssh/my_hosts/* | 
   awk -F'[: /]' '{printf "%-20s: %s\n", $(NF-2), $NF}' |
   fzf --reverse --header "Select a Host" --border --prompt "SSH Host> " --query "$LBUFFER" \
