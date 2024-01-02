@@ -92,7 +92,7 @@ autoload -Uz ssh-fzf fancy-ctrl-z
 zle -N ssh-fzf
 zle -N fancy-ctrl-z
 
-bindkey '^\' ssh-fzf
+bindkey '^S' ssh-fzf
 bindkey '^Z' fancy-ctrl-z
 # My Custom Functions End
 #
