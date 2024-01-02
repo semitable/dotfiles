@@ -87,13 +87,15 @@ zinit wait lucid for \
 
 # My Custom Functions
 fpath=( ~/.zfunc "${fpath[@]}" )
-autoload -Uz ssh-fzf fancy-ctrl-z
+autoload -Uz ssh-fzf fancy-ctrl-z bw-fzf
 
 zle -N ssh-fzf
 zle -N fancy-ctrl-z
+zle -N bw-fzf
 
 bindkey '^S' ssh-fzf
 bindkey '^Z' fancy-ctrl-z
+bindkey '^W' bw-fzf
 # My Custom Functions End
 #
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

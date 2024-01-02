@@ -1,0 +1,10 @@
+bw list items | \
+jq -r '.[] | [.id, .name, .login.username, .login.password] | @tsv' | \
+awk '{ printf "%s: %-40s: %s %s\n", $1, $2, $3, $4}' | \
+fzf --layout=reverse --prompt=">" \
+    --preview="echo {} | awk -F': ' '{ print \$1}' | xargs -I{} bw get item {} | jq -C '.'" \
+    --with-nth 2,3,4 | \
+awk '{ printf $NF }' | \
+xclip -selection clipboard
+
+zle reset-prompt
