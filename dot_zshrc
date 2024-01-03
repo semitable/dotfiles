@@ -73,19 +73,12 @@ command -v nvim > /dev/null 2>&1 && alias vim="nvim"
 ###
 
 
-zinit snippet OMZ::plugins/command-not-found/command-not-found.plugin.zsh
-zinit snippet OMZ::plugins/autojump/autojump.plugin.zsh
+zinit snippet OMZP::command-not-found
+zinit snippet OMZP::autojump
 
-zinit wait lucid for \
- atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
-    zdharma-continuum/fast-syntax-highlighting \
- blockf \
-    zsh-users/zsh-completions \
- atload"!_zsh_autosuggest_start" \
-    zsh-users/zsh-autosuggestions
-
-autoload compinit
-compinit
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
 
 # My Custom Functions
 fpath=( ~/.zfunc "${fpath[@]}" )
@@ -110,15 +103,15 @@ bindkey '^W' bw-fzf
 
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba init' !!
-export MAMBA_EXE='/home/semitable/bin/micromamba';
-export MAMBA_ROOT_PREFIX='/home/semitable/micromamba';
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
-else
-    alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
-fi
-unset __mamba_setup
+# export MAMBA_EXE='/home/semitable/bin/micromamba';
+# export MAMBA_ROOT_PREFIX='/home/semitable/micromamba';
+# __mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__mamba_setup"
+# else
+#     alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+# fi
+# unset __mamba_setup
 # <<< mamba initialize <<<
 #
 export PYENV_ROOT="$HOME/.pyenv"
@@ -126,3 +119,5 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 
 
+autoload -Uz compinit; compinit
+zinit cdreplay -q
