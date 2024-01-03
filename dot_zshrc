@@ -37,8 +37,6 @@ if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
 fi
 
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
@@ -72,13 +70,14 @@ alias ~='cd ~'
 command -v nvim > /dev/null 2>&1 && alias vim="nvim"
 ###
 
-
 zinit snippet OMZP::command-not-found
 zinit snippet OMZP::autojump
+
 
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+# zinit light marlonrichert/zsh-autocomplete
 
 # My Custom Functions
 fpath=( ~/.zfunc "${fpath[@]}" )
