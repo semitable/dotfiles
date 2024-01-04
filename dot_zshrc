@@ -99,7 +99,9 @@ bindkey '^W' bw-fzf
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
+zinit wait'1' lucid \
+  from"gh-r" as'program' bpick'*linux_amd64.tar.gz' pick'gh*/bin/gh' \
+  light-mode for @cli/cli
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba init' !!
 # export MAMBA_EXE='/home/semitable/bin/micromamba';
