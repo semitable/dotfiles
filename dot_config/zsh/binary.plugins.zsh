@@ -30,4 +30,5 @@ zinit as"null" wait"0a" lucid light-mode from"gh-r" completions sbin for \
   sbin"lazygit" jesseduffield/lazygit \
   sbin"**/rg" BurntSushi/ripgrep \
   sbin"**/fd" @sharkdp/fd \
-  sbin"eza" eza-community/eza
+  sbin"eza" eza-community/eza \
+  mv"completion/zsh -> completion/_rbw" doy/rbw
