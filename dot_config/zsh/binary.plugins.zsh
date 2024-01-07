@@ -31,4 +31,7 @@ zinit as"null" wait"0a" lucid light-mode from"gh-r" completions sbin for \
   sbin"**/rg" BurntSushi/ripgrep \
   sbin"**/fd" @sharkdp/fd \
   sbin"eza" eza-community/eza \
-  mv"completion/zsh -> completion/_rbw" doy/rbw
+  sbin"rbw" mv"completion/zsh -> completion/_rbw" doy/rbw \
+  sbin"autorestic" mv"autorestic* -> autorestic" \
+    atclone"mkdir completions; ./autorestic completion zsh > completions/_autorestic" \
+    cupcakearmy/autorestic
