@@ -22,6 +22,15 @@ zinit as"null" wait"0a" lucid light-mode from"gh-r" completions \
     src"key-bindings.zsh" \
   for @junegunn/fzf
 
+# micromamba
+zinit as'program' wait'0a' lucid light-mode nocompletions from'gh-r' \
+  atclone'./bin/micromamba shell hook --shell zsh --root-prefix $HOME/micromamba > zmicromamba.zsh' \
+  atload"export MAMBA_EXE=\`which micromamba\`; export MAMBA_ROOT_PREFIX=$HOME/micromamba/" \
+  bpick'micromamba-linux-64.tar.bz2' \
+  pick'bin/micromamba' \
+  src'zmicromamba.zsh' \
+  for 'mamba-org/micromamba-releases'
+
 # other bins
 zinit as"null" wait"0a" lucid light-mode from"gh-r" completions sbin for \
   atclone"mkdir completions; **/bin/gh completion -s zsh > completions/_gh" \
