@@ -1,0 +1,7 @@
+import = ["/home/semitable/.config/alacritty/themes/themes/gruvbox_dark.yaml"]
+
+[font.normal]
+family = "MesloLGS NF"
+
+[window]
+startup_mode = "Maximized"
