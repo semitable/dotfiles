@@ -1,5 +1,6 @@
 ForwardX11 yes
 ServerAliveInterval 60
+ForwardAgent yes
 
 Include ~/.ssh/my_hosts/*
 
