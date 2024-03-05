@@ -10,7 +10,8 @@ alias distro='cat /etc/*-release'
 alias ffs='sudo $(fc -ln -1)'
 alias please='sudo $(fc -ln -1)'
 
-alias ls='eza -al --sort=modified --group-directories-first'
+alias ls='eza'
+alias ll='eza -al --sort=modified --group-directories-first'
 # alias ls='ls --color=auto'
 # alias ll="ls -alrtF --color"
 alias ..='cd ..'
