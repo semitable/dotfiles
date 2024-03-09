@@ -1,4 +1,4 @@
-import = ["/home/semitable/.config/alacritty/themes/themes/gruvbox_dark.yaml"]
+import = ["/home/semitable/.config/alacritty/themes/themes/tokyo-night.toml"]
 
 [font.normal]
 family = "MesloLGS NF"
