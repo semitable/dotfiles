@@ -10,7 +10,7 @@
 return {
   -- add gruvbox
   {
-    "ellisonleao/gruvbox.nvim",
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
   },
@@ -19,7 +19,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "tokyonight",
     },
   },
 
