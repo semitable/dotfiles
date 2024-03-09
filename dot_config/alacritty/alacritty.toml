@@ -1,4 +1,4 @@
-import = ["/home/semitable/.config/alacritty/themes/themes/tokyo-night.toml"]
+import = ["~/.config/alacritty/themes/themes/tokyo-night.toml"]
 
 [font.normal]
 family = "FiraCode Nerd Font Mono"
