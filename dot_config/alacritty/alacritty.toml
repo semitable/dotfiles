@@ -1,7 +1,7 @@
 import = ["/home/semitable/.config/alacritty/themes/themes/tokyo-night.toml"]
 
 [font.normal]
-family = "MesloLGS NF"
+family = "FiraCode Nerd Font Mono"
 
 [window]
 startup_mode = "Maximized"
