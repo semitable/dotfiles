@@ -196,5 +196,4 @@ local plugins = {
   },
 }
 
-require("lazy").setup(plugins)
 return plugins
