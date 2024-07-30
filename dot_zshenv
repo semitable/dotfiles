@@ -1,3 +1,10 @@
-# Skip the not really helping Ubuntu global compinit
+# sKIP The not really helping Ubuntu global compinit
 skip_global_compinit=1
 . "$HOME/.cargo/env"
+
+: ${INSTALL_DEV:=true}
+: ${INSTALL_MICROMAMBA:=false}
+: ${INSTALL_UTILS:=true}
+: ${INSTALL_GIT_TOOLS:=true}
+: ${INSTALL_BACKUP_TOOLS:=false}
+

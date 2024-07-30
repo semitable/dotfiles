@@ -1,10 +1,3 @@
-# Default values for environment variables
-: ${INSTALL_DEV:=false}
-: ${INSTALL_MICROMAMBA:=false}
-: ${INSTALL_UTILS:=false}
-: ${INSTALL_GIT_TOOLS:=false}
-: ${INSTALL_BACKUP_TOOLS:=false}
-
 # Dev category
 if [[ "$INSTALL_DEV" == true ]]; then
   # neovim
@@ -17,16 +10,16 @@ if [[ "$INSTALL_DEV" == true ]]; then
   zinit as"null" wait"0a" lucid light-mode from"gh-r" completions \
     sbin"fzf*" \
     dl'https://raw.githubusercontent.com/junegunn/fzf/master/bin/fzf-tmux' \
-    dl'https://raw.githubusercontent.com/junegunn/fzf/488a236b7a4d01e910e0ac80b4794a7a054fb3a8/shell/completion.zsh -> fzf' \
+    dl'https://raw.githubusercontent.com/junegunn/fzf/488a236b7a4d01e910e0ac80b4794a7a054fb3a8/shell/completion.zsh -> _fzf' \
     dl'https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.zsh' \
     dl'https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf-tmux.1 -> $ZPFX/man/man1/fzf-tmux.1' \
     dl'https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf.1 -> $ZPFX/man/man1/fzf.1' \
     src"key-bindings.zsh" \
-    for @junegunn/fzf
+  for @junegunn/fzf
 
   # rg
   zinit as"null" wait"0a" lucid light-mode from"gh-r" completions sbin for \
-    sbin"**/rg" bpick'x86_64-unknown-linux-musl*' BurntSushi/ripgrep
+    sbin"**/rg" bpick'*x86_64-unknown-linux-musl*' BurntSushi/ripgrep
 
   # fd
   zinit as"null" wait"0a" lucid light-mode from"gh-r" completions sbin for \
@@ -34,8 +27,15 @@ if [[ "$INSTALL_DEV" == true ]]; then
 fi
 
 # Python/Conda category
-if [[ "$INSTALL_PYTHON_CONDA" == true ]]; then
-  # ...
+if [[ "$INSTALL_MICROMAMBA" == true ]]; then
+  # micromamba
+  zinit as'program' wait'0a' lucid light-mode nocompletions from'gh-r' \
+    atclone'./bin/micromamba shell hook --shell zsh --root-prefix $HOME/micromamba > zmicromamba.zsh' \
+    atload"export MAMBA_EXE=\`which micromamba\`; export MAMBA_ROOT_PREFIX=$HOME/micromamba/" \
+    bpick'micromamba-linux-64.tar.bz2' \
+    pick'bin/micromamba' \
+    src'zmicromamba.zsh' \
+    for 'mamba-org/micromamba-releases'
 fi
 
 # Utils category
@@ -72,17 +72,4 @@ if [[ "$INSTALL_BACKUP_TOOLS" == true ]]; then
     atclone"mkdir completions; ./autorestic completion zsh > completions/_autorestic" \
     cupcakearmy/autorestic
 fi
-
-# Python/Conda category
-if [[ "$INSTALL_MICROMAMBA" == true ]]; then
-  # micromamba
-  zinit as'program' wait'0a' lucid light-mode nocompletions from'gh-r' \
-    atclone'./bin/micromamba shell hook --shell zsh --root-prefix $HOME/micromamba > zmicromamba.zsh' \
-    atload"export MAMBAEXE=\`which micromamba\`; export MAMBA_ROOT_PREFIX=$HOME/micromamba/" \
-    bpick'micromamba-linux-64.tar.bz2' \
-    pick'bin/micromamba' \
-    src'zmicromamba.zsh' \
-    for 'mamba-org/micromamba-releases'
-fi
-
 
