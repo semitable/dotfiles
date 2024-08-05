@@ -30,7 +30,7 @@ if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
         print -P "%F{160} The clone has failed.%f%b"
 fi
 
-SOURCE "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 
 # annexes (which are just extensions of zinit)
 zinit light-mode for \
