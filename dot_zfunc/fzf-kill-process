@@ -1,0 +1,8 @@
+local pid
+pid=$(ps -eo pid,comm,user,%cpu,%mem --sort=-%cpu | fzf --header="Select process to kill" | awk '{print $1}')
+
+if [[ -n "$pid" ]]; then
+  kill -9 "$pid" && echo "Process $pid killed."
+else
+  echo "No process selected."
+fi
