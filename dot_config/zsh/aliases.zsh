@@ -17,3 +17,16 @@ alias ll='eza -al --sort=modified --group-directories-first'
 alias ..='cd ..'
 alias ...='cd ..;cd ..'
 alias ~='cd ~'
+
+
+fzf-kill-process() {
+  # Use ps to list processes, filter columns, pipe through fzf, then extract PID and kill
+  local pid
+  pid=$(ps -eo pid,comm,user,%cpu,%mem --sort=-%cpu | fzf --header="Select process to kill" | awk '{print $1}')
+
+  if [[ -n "$pid" ]]; then
+    kill -9 "$pid" && echo "Process $pid killed."
+  else
+    echo "No process selected."
+  fi
+}
