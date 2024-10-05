@@ -72,6 +72,8 @@ zle -N bw-fzf
 bindkey '^S' ssh-fzf
 bindkey '^Z' fancy-ctrl-z
 bindkey '^W' bw-fzf
+bindkey '^[F' fzf-kill-process
+
 # My Custom Functions End
 #
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
