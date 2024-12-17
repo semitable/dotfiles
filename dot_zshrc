@@ -11,6 +11,7 @@ export ZHOMEDIR="$HOME/.config/zsh"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/usr/local/texlive/2024/bin/x86_64-linux/:$PATH"
 
 export EDITOR=`which vim`
 export SUDO_EDITOR=`which vim`
@@ -62,11 +63,12 @@ zinit for \
 
 # My Custom Functions
 fpath=( ~/.zfunc "${fpath[@]}" )
-autoload -Uz ssh-fzf fancy-ctrl-z bw-fzf
+autoload -Uz ssh-fzf fancy-ctrl-z bw-fzf fzf-kill-process
 
 zle -N ssh-fzf
 zle -N fancy-ctrl-z
 zle -N bw-fzf
+zle -N fzf-kill-process
 
 bindkey '^S' ssh-fzf
 bindkey '^Z' fancy-ctrl-z
